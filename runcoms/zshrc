@@ -12,3 +12,7 @@ fi
 
 # Customize to your needs...
 
+source ~/.zmyterminalrc
+
+setopt APPEND_HISTORY        # Write to the history when the shell exits, not inmediatelly.
+unsetopt SHARE_HISTORY

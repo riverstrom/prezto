@@ -1,0 +1,62 @@
+# ROS environment setup
+
+# Configuring rosmake to use up to 8 cores, while CPU load is available.
+export ROS_PARALLEL_JOBS='-j8 -l8'
+
+# Setup for ROS Diamondback distro
+#source /opt/ros/diamondback/setup.zsh
+
+# Setup of development environment previous to upgrade to Ubuntu 12.04 precise
+#source /home/daniel/Proyectos/ROS/setup.zsh
+
+# Setup for ROS Fuerte distro
+#source /opt/ros/fuerte/setup.zsh
+
+# Setup of development environment overlay for ROS Fuerte
+#source /home/daniel/Proyectos/ROS/fuerte_workspace/setup.zsh
+
+# Setup of development environment overlay for Hector packages in ROS Fuerte
+#source /home/daniel/Proyectos/ROS/hector_fuerte_workspace/setup.zsh
+
+# Setup of development environment overlay for move_base_3D over ROS Fuerte
+#source /home/daniel/Proyectos/ROS/fuerte_move_base_3D_workspace/setup.zsh
+
+# Setup of development environment overlay for move_base_3D over ROS Fuerte (with all of its dependencies migrated to Fuerte version)
+#source /home/daniel/Proyectos/ROS/fuerte_move_base_3D_migration/setup.zsh
+
+# Setup of development environment overlay for amclgps over ROS Fuerte
+#source ~/Proyectos/ROS/fuerte_amclgps_migration/setup.zsh
+
+# Setup of development environment overlay for predictive_explorer over ROS Fuerte
+#source /home/daniel/Proyectos/ROS/predictive_explorer_fuerte/setup.zsh
+
+# Setup of development environment overlay for predictive_explorer_unified over ROS Fuerte
+# source /home/daniel/Proyectos/ROS/predictive_explorer_workspace/setup.zsh
+
+# Setup of development environment overlay for predictive_explorer_unified over ROS Fuerte
+#source /home/daniel/Proyectos/ROS/predictive_explorer_fuerte_unified/setup.zsh
+
+# Setup of development environment overlay for predictive_explorer_unified over ROS Fuerte in SSD
+source /media/9bb4b285-b2c9-488c-950c-6a96fda46180/home/daniel/Proyectos/ROS/predictive_explorer_fuerte_unified/setup.zsh
+
+# Setup for ROS Hydro distro
+# source /opt/ros/hydro/setup.zsh
+
+# Setup of development environment overlay for hydro_simulators_workspace over ROS Hydro and Verdino Hydro workspace
+#source /home/daniel/Proyectos/ROS/hydro_workspace/devel/setup.zsh
+
+# Setup of development environment overlay for hydro_simulators_workspace over ROS Hydro and Verdino Hydro workspace
+#source /home/daniel/Proyectos/ROS/hydro_simulators_workspace/devel/setup.zsh
+
+export EDITOR='subl'
+
+# Gazebo environment variables
+
+#export GAZEBO_RESOURCE_PATH=~/Proyectos/ROS/hydro_simulators_workspace/src/grull_gazebo_models_database/parking_estii_mesh/meshes/
+#export GAZEBO_MODEL_PATH=~/Proyectos/ROS/hydro_simulators_workspace/src/gazebo_models/
+
+# V-REP ROS communication
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/daniel/Descargas/V-REP_PRO_EDU_V3_1_2_64_Linux/programming/ros_stacks-rosBuild/vrep
+
+# Latex enviroment variables
+PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH
