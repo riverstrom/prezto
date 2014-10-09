@@ -54,7 +54,7 @@ export ROS_PARALLEL_JOBS='-j8 -l8'
 #source /home/daniel/Proyectos/ROS/predictive_explorer_fuerte_unified/setup.zsh
 
 # Setup of development environment overlay for predictive_explorer_unified over ROS Fuerte in SSD
-source /media/9bb4b285-b2c9-488c-950c-6a96fda46180/home/daniel/Proyectos/ROS/predictive_explorer_fuerte_unified/setup.zsh
+#source /media/9bb4b285-b2c9-488c-950c-6a96fda46180/home/daniel/Proyectos/ROS/predictive_explorer_fuerte_unified/setup.zsh
 
 # Setup for ROS Hydro distro
 # source /opt/ros/hydro/setup.zsh
@@ -63,17 +63,29 @@ source /media/9bb4b285-b2c9-488c-950c-6a96fda46180/home/daniel/Proyectos/ROS/pre
 #source /home/daniel/Proyectos/ROS/hydro_workspace/devel/setup.zsh
 
 # Setup of development environment overlay for hydro_simulators_workspace over ROS Hydro and Verdino Hydro workspace
-#source /home/daniel/Proyectos/ROS/hydro_simulators_workspace/devel/setup.zsh
+#source /home/daniel/Proyectos/ROS/hydro_simulators_workspace/devel/setup.bash
 
+# Base Indigo Igloo
+#source /opt/ros/indigo/setup.bash
+
+# Setup of development environment overlay for predictive_explorer over ROS Indigo (Catkin)
+# source /home/daniel/Proyectos/ROS/predictive_explorer_indigo_workspace/devel/setup.bash
+ 
+# Setup of development environment overlay for predictive_explorer over ROS Indigo (Rosbuild)
+source /home/daniel/Proyectos/ROS/predictive_explorer_rosbuild_indigo_workspace/setup.zsh
+ 
 export EDITOR='subl'
-
+ 
 # Gazebo environment variables
-
-#export GAZEBO_RESOURCE_PATH=~/Proyectos/ROS/hydro_simulators_workspace/src/grull_gazebo_models_database/parking_estii_mesh/meshes/
-#export GAZEBO_MODEL_PATH=~/Proyectos/ROS/hydro_simulators_workspace/src/gazebo_models/
-
+ 
+export GAZEBO_MODEL_PATH=~/Proyectos/ROS/hydro_simulators_workspace/src/grull_verdino_simulator_gazebo/models
+ 
 # V-REP ROS communication
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/daniel/Descargas/V-REP_PRO_EDU_V3_1_2_64_Linux/programming/ros_stacks-rosBuild/vrep
-
-# Latex enviroment variables
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/Descargas/V-REP_PRO_EDU_V3_1_2_64_Linux/programming/ros_stacks-rosBuild/vrep
+ 
+# vrep_ros_bridge setup
+export VREP_ROOT_DIR=/home/daniel/Descargas/V-REP_PRO_EDU_V3_1_1_64_Linux/
+ 
+# linuxtrack (TrackIR, WiiMote, etc. library and drivers)
+export PATH=${PATH}:/opt/linuxtrack/bin# Latex enviroment variables
 PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH
