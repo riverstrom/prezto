@@ -17,8 +17,12 @@ unsetopt SHARE_HISTORY
 
 # ROS environment setup
 
-# Configuring rosmake to use up to 8 cores, while CPU load is available.
-export ROS_PARALLEL_JOBS='-j8 -l8'
+# Configuring rosmake to use up to 4 cores, while CPU load is available.
+export ROS_PARALLEL_JOBS='-j4 -l4'
+
+# This is needed for zsh to work with inner setup.sh,
+# ATENTION: unset after sourceing setup.zsh
+setopt clobber
 
 # Setup for ROS Diamondback distro
 #source /opt/ros/diamondback/setup.zsh
@@ -66,10 +70,10 @@ export ROS_PARALLEL_JOBS='-j8 -l8'
 #source /home/daniel/Proyectos/ROS/hydro_simulators_workspace/devel/setup.bash
 
 # Base Indigo Igloo
-#source /opt/ros/indigo/setup.bash
+#source /opt/ros/indigo/setup.zsh
 
 # Setup of development environment overlay for predictive_explorer over ROS Indigo (Catkin)
-# source /home/daniel/Proyectos/ROS/predictive_explorer_indigo_workspace/devel/setup.bash
+#source /home/daniel/Proyectos/ROS/predictive_explorer_indigo_workspace/devel/setup.zsh
  
 # Setup of development environment overlay for predictive_explorer over ROS Indigo (Rosbuild)
 #source /home/daniel/Proyectos/ROS/predictive_explorer_rosbuild_indigo_workspace/setup.zsh
@@ -82,6 +86,12 @@ export ROS_PARALLEL_JOBS='-j8 -l8'
 
 # Setup of development environment overlay for Point Grey camera driver over ROS Hydro (Catkin)
 #source /home/daniel/Proyectos/ROS/pointgrey_camera_driver_hydro/devel/setup.zsh
+
+# Setup of development environment overlay for ETHZASL_ICP_MAPPING over ROS Indigo (Rosbuild)
+#source /home/daniel/Proyectos/ROS/ethzasl_icp_mapping/devel/setup.zsh
+
+# ATENTION Reseting after sourcing setup.zsh
+unsetopt clobber
  
 export EDITOR='subl'
  
