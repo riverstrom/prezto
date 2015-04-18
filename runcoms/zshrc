@@ -48,7 +48,7 @@ export ROS_PARALLEL_JOBS='-j8 -l8'
 #source /home/daniel/Proyectos/ROS/predictive_explorer_fuerte/setup.zsh
 
 # Setup of development environment overlay for predictive_explorer_unified over ROS Fuerte
-# source /home/daniel/Proyectos/ROS/predictive_explorer_workspace/setup.zsh
+#source /home/daniel/Proyectos/ROS/predictive_explorer_workspace/setup.zsh
 
 # Setup of development environment overlay for predictive_explorer_unified over ROS Fuerte
 #source /home/daniel/Proyectos/ROS/predictive_explorer_fuerte_unified/setup.zsh
@@ -72,7 +72,16 @@ export ROS_PARALLEL_JOBS='-j8 -l8'
 # source /home/daniel/Proyectos/ROS/predictive_explorer_indigo_workspace/devel/setup.bash
  
 # Setup of development environment overlay for predictive_explorer over ROS Indigo (Rosbuild)
-source /home/daniel/Proyectos/ROS/predictive_explorer_rosbuild_indigo_workspace/setup.zsh
+#source /home/daniel/Proyectos/ROS/predictive_explorer_rosbuild_indigo_workspace/setup.zsh
+
+# Setup of development environment overlay for LSD-SLAM over ROS Fuerte (Rosbuild)
+#source /home/daniel/Proyectos/ROS/lsd_slam_fuerte/setup.zsh
+
+# Setup of development environment overlay for IAI Kinect2 over ROS Hydro (Catkin)
+# /home/daniel/Proyectos/ROS/iai_kinect2_hydro/devel/setup.zsh
+
+# Setup of development environment overlay for Point Grey camera driver over ROS Hydro (Catkin)
+#source /home/daniel/Proyectos/ROS/pointgrey_camera_driver_hydro/devel/setup.zsh
  
 export EDITOR='subl'
  
@@ -81,11 +90,17 @@ export EDITOR='subl'
 export GAZEBO_MODEL_PATH=~/Proyectos/ROS/hydro_simulators_workspace/src/grull_verdino_simulator_gazebo/models
  
 # V-REP ROS communication
+#export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/Descargas/V-REP_PRO_EDU_V3_1_1_64_Linux/programming/ros_stacks/vrep
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/Descargas/V-REP_PRO_EDU_V3_1_2_64_Linux/programming/ros_stacks-rosBuild/vrep
  
 # vrep_ros_bridge setup
 export VREP_ROOT_DIR=/home/daniel/Descargas/V-REP_PRO_EDU_V3_1_1_64_Linux/
  
 # linuxtrack (TrackIR, WiiMote, etc. library and drivers)
-export PATH=${PATH}:/opt/linuxtrack/bin# Latex enviroment variables
-PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH
+export PATH=${PATH}:/opt/linuxtrack/bin
+
+# Latex enviroment variables
+#PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH
+
+# SmartGitHG Java JRE path
+export SMARTGITHG_JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk-amd64/jre"
